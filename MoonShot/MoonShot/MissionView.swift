@@ -27,7 +27,10 @@ struct MissionView: View {
                         .frame(maxWidth: geometry.size.width * 0.7)
                         .padding(.top)
                     
-                    Text(self.mission.description)
+                    Text(mission.formattedLaunchDate)
+                        .padding()
+                    
+                    Text(mission.description)
                         .padding()
                     
                     ForEach(astronauts, id: \.role){ crewMember in
